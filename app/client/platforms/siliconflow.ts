@@ -123,7 +123,7 @@ export class SiliconflowApi implements LLMApi {
       // make a fetch request
       const requestTimeoutId = setTimeout(
         () => controller.abort(),
-        REQUEST_TIMEOUT_MS,
+        10 * REQUEST_TIMEOUT_MS,
       );
 
       if (shouldStream) {
